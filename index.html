@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Item Store</h1>
+        <div class="items">
+            <div class="item" data-price="50">
+                <h2>Item 1</h2>
+                <p>Price: $50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item" data-price="100">
+                <h2>Item 2</h2>
+                <p>Price: $100</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul class="cart-items"></ul>
+            <p>Total: $<span class="total-price">0</span></p>
+            <div class="payment-options">
+                <h3>Choose Payment Option</h3>
+                <select id="payment-method">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="tether">Tether</option>
+                    <option value="litecoin">Litecoin</option>
+                    <option value="bitcoinsv">BitcoinSV</option>
+                    <option value="bitcoincash">BitcoinCash</option>
+                </select>
+                <button id="get-crypto-price">Get Crypto Price</button>
+            </div>
+            <div class="crypto-price">
+                <p>Crypto Amount: <span id="crypto-amount">0</span></p>
+                <p>Wallet Address: <span id="wallet-address"></span></p>
+                <button id="initiate-payment">Initiate Payment</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

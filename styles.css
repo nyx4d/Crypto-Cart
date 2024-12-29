@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.items, .cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item, .cart {
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item button, .crypto-price button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.item button:hover, .crypto-price button:hover {
+    background: #555;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.payment-options, .crypto-price {
+    margin-top: 20px;
+}
+
+.payment-options select, .crypto-price span {
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Purchase!</h1>
+        <div class="downloads">
+            <h2>Download Your Items</h2>
+            <ul class="download-list">
+                <?php
+                session_start();
+                $cart = $_SESSION['cart'] ?? [];
+                foreach ($cart as $item) {
+                    echo "<li><a href='path/to/download/{$item['name']}.zip'>Download {$item['name']}</a></li>";
+                }
+                session_destroy();
+                ?>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
